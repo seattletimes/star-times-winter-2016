@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_head.html") %>
+  </head>
+  <body>
+
+    <%= t.include("partials/_nav.html") %>
+
+    <%= t.include("partials/_ad.html", { type: "banner" }) %>
+
+    <main class="interactive">
+      <div class="toplevel"
+        <h1><img src="./assets/startimes-logo1000.jpg" alt="Seattle Times Star Times: Fall 2015" style="padding-bottom: 20px; color: @df-light-gray;"></h1>
+
+        <div class="video-container">
+          <div class="aspect-inner">
+            <!-- replace this with Katie's video, or an ad -->
+            <div style="display: block; position: relative; max-width: 100%;"><div style="display: block; padding-top: 56.25%;"><iframe src="//players.brightcove.net/1509317113/default_default/index.html?videoId=4635176178001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="border: 1px solid #333; width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div>
+            </div>
+          </div>
+        </div>
+          <p>Three times a year, The Seattle Times honors the best athletes and coaches in Seattle-area high-school team sports with its Star Times all-area teams. The fall selections are for football, volleyball and girls soccer.</p>
+          <p>Seattle Times staffers and freelancers select Star Times all-area honorees from athletes in King and Snohomish counties, plus schools in the Metro and WesCo conferences. Meet fall 2015's selections below.</p>
+          <p class="credit">Published Nov. 30, 2015</p>
+      </div>
+      <section class="slider">
+        <a class="pan left" href="javascript:;">&laquo;</a>
+        <div class="slide-container">
+          <div class="row">
+            <% json.PrepStars_stars.forEach(function(student, i) { %>
+            <div class="student">
+              <div class="image-frame">
+                <!-- replace this image's URL with the actual student images when available -->
+                <img src=".<%= student.image %>" data-student="<%= student.name %>">
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+        <a class="pan right" href="javascript:;">&raquo;</a>
+      </section>
+      <section class="details">
+        <h3>Click or tap on an athlete for details.</h3>
+      </section>
+
+      <div class="credit">
+      Photos by Sy Bean<br/>
+      Video by Katie G. Cotterill<br/>
+      Athlete bios by Sandy Ringer and Matt Massey<br/>
+      Production by Nick Eaton and Thomas Wilburn
+      </div>
+
+    </main>
+
+    <%= t.include("partials/_navBottom.html") %>
+
+    <script>
+studentData = <%= JSON.stringify(json.PrepStars_stars) %>;
+    </script>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
