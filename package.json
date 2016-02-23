@@ -5,7 +5,7 @@
   "author": "Nick Eaton",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/seattletimes/star-times-winter-2016"
   },
   "dependencies": {
     "async": "^1.2.1",
