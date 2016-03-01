@@ -41,14 +41,14 @@ $slider.on("click", ".pan", function() {
   var { width } = viewport.getBoundingClientRect();
   var scroll = viewport.scrollLeft;
   if (goRight) {
-    var distance = width * .8;
+    var distance = width * .9;
     if ((viewport.scrollLeft + distance) == oldDistance) {
       $(viewport).animate({ scrollLeft: 0 });
     } else {
       $(viewport).animate({ scrollLeft: viewport.scrollLeft + distance });
     }
   } else {
-    var distance = width * -.8;
+    var distance = width * -.9;
     if ((viewport.scrollLeft + distance) == oldDistance) {
       // This is a hack and I know it:
       $(viewport).animate({ scrollLeft: 15000 });

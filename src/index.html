@@ -15,24 +15,24 @@
 
     <main class="interactive">
       <div class="toplevel"
-        <h1><img src="./assets/startimes-logo1000.jpg" alt="Seattle Times Star Times: Fall 2015" style="padding-bottom: 20px; color: @df-light-gray;"></h1>
+        <h1><img src="./assets/startimes-logo1000.jpg" alt="Seattle Times Star Times: Winter 2016" style="padding-bottom: 20px; color: @df-light-gray;"></h1>
 
         <div class="video-container">
           <div class="aspect-inner">
             <!-- replace this with Katie's video, or an ad -->
-            <div style="display: block; position: relative; max-width: 100%;"><div style="display: block; padding-top: 56.25%;"><iframe src="//players.brightcove.net/1509317113/default_default/index.html?videoId=4635176178001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="border: 1px solid #333; width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div>
+            <div style="display: block; position: relative; max-width: 100%;"><div style="display: block; padding-top: 56.25%;"><iframe src="//players.brightcove.net/1509317113/default_default/index.html?videoId=4776373397001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="border: 1px solid #333; width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div>
             </div>
           </div>
         </div>
-          <p>Three times a year, The Seattle Times honors the best athletes and coaches in Seattle-area high-school team sports with its Star Times all-area teams. The fall selections are for football, volleyball and girls soccer.</p>
-          <p>Seattle Times staffers and freelancers select Star Times all-area honorees from athletes in King and Snohomish counties, plus schools in the Metro and WesCo conferences. Meet fall 2015's selections below.</p>
-          <p class="credit">Published Nov. 30, 2015</p>
+          <p>Three times a year, The Seattle Times honors the best athletes and coaches in Seattle-area high-school team sports with its Star Times all-area teams. The winter selections are for boys' and girls' basketball.</p>
+          <p>Seattle Times staffers and freelancers select Star Times all-area honorees from athletes in King and Snohomish counties, plus schools in the Metro and WesCo conferences. Meet the winter 2016 selections below.</p>
+          <p class="credit">Published Feb. 29, 2016</p>
       </div>
       <section class="slider">
         <a class="pan left" href="javascript:;">&laquo;</a>
         <div class="slide-container">
           <div class="row">
-            <% json.PrepStars_stars.forEach(function(student, i) { %>
+            <% json.StarTimesWinter2016_stars.forEach(function(student, i) { %>
             <div class="student">
               <div class="image-frame">
                 <!-- replace this image's URL with the actual student images when available -->
@@ -51,7 +51,7 @@
       <div class="credit">
       Photos by Sy Bean<br/>
       Video by Katie G. Cotterill<br/>
-      Athlete bios by Sandy Ringer and Matt Massey<br/>
+      Athlete bios by Doug Drowley and Sandy Ringer<br/>
       Production by Nick Eaton and Thomas Wilburn
       </div>
 
@@ -60,7 +60,7 @@
     <%= t.include("partials/_navBottom.html") %>
 
     <script>
-studentData = <%= JSON.stringify(json.PrepStars_stars) %>;
+studentData = <%= JSON.stringify(json.StarTimesWinter2016_stars) %>;
     </script>
 
     <script src="app.js" async></script>
